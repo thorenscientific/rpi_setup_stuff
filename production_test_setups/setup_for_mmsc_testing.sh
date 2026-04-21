@@ -2,9 +2,9 @@
 
 sudo pip install --upgrade --force-reinstall numpy
 sudo pip install --upgrade --force-reinstall matplotlib
-git clone https://github.com/thorenscientific/pyadi-iio.git
+git clone https://github.com/analogdevicesinc/pyadi-iio.git
 cd pyadi-iio
-git checkout adalm-mmsc
+git checkout main
 sudo pip install .
 cd ..
 git clone https://github.com/analogdevicesinc/genalyzer/
