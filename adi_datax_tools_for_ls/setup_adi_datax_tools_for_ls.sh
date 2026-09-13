@@ -25,7 +25,8 @@ cat >> "$CONFIG" << 'EOF'
 
 [all]
 
-dtoverlay=rpi-adalm-lsmspg
+# Starting out with this COMMENTED:
+# dtoverlay=rpi-adalm-lsmspg
 
 # Heartbeat blinky:
 dtparam=act_led_gpio=20
