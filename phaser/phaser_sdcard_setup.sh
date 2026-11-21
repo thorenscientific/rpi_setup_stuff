@@ -37,16 +37,17 @@ sudo cp hostname /etc/
 wget https://github.com/thorenscientific/rpi_setup_stuff/raw/main/phaser/pluto_update_ad9361.sh
 chmod +x pluto_update_ad9361.sh
 
-
 cd ~
-# This is still necessary as of April, 2023.
-# Phaser code has been merged to master, July 2023:
-# https://github.com/analogdevicesinc/pyadi-iio/pull/435
-# Uninstall existing pyadi-iio, reinstall pyadi-iio master branch from source:
+
+# Uninstall existing pyadi-iio, reinstall pyadi-iio v0.0.16 branch from source.
+# The v0.0.16 branch is a stopgap until all scripts and depenencies are tested
+# with Kuiper 2026 R1. We'll also move to a more tightly controlled virtual environment,
+# maybe to the point of installing a fixed Python version.
+
 sudo pip3 uninstall -y pyadi-iio
 git clone https://github.com/analogdevicesinc/pyadi-iio.git
 cd pyadi-iio
-git checkout main
+git checkout v0.0.16
 sudo pip install .
 
 cd ~
